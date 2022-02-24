@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome/all.min.css" crossorigin="anonymous" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Todo App</title>
+  </head>
+
+  <body>
+    <div id="root">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <form>
+              <div class="mb-3 input-group">
+                <input
+                  class="form-control"
+                  placeholder="New Item"
+                  aria-describedby="basic-addon1"
+                  type="text"
+                  value=""
+                />
+                <div class="input-group-append">
+                  <button class="btn btn-success" type="submit" disabled="">
+                    Add Item
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <p class="text-center">No items yet! Add one above!</p>
+
+            <div class="item false container-fluid">
+              <div class="row">
+                <div class="text-center col-1">
+                  <button
+                    aria-label="Mark item as complete"
+                    type="button"
+                    class="toggles btn btn-link btn-sm"
+                  >
+                    <i class="far fa-square"></i>
+                  </button>
+                </div>
+
+                <div class="name col-10">apple</div>
+
+                <div class="text-center remove col-1">
+                  <button
+                    aria-label="Remove Item"
+                    type="button"
+                    class="btn btn-link btn-sm"
+                  >
+                    <i class="fa fa-trash text-danger"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
