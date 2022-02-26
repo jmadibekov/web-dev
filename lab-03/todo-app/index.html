@@ -1,3 +1,6 @@
+<!-- Inspired by the sample app in the getting started tutorial of docker 
+  https://github.com/docker/getting-started -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,31 +41,28 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 offset-md-3">
-            <form>
-              <div class="mb-3 input-group">
-                <input
-                  id="input-field"
-                  class="form-control"
-                  placeholder="New Item"
-                  aria-describedby="basic-addon1"
-                  type="text"
-                  value=""
-                />
-                <div class="input-group-append">
-                  <button
-                    class="btn btn-success"
-                    id="add-item-btn"
-                    type="button"
-                  >
-                    Add Item
-                  </button>
-                </div>
+            <!-- <form> -->
+            <div class="mb-3 input-group">
+              <input
+                id="input-field"
+                class="form-control"
+                placeholder="New Item"
+                aria-describedby="basic-addon1"
+                type="text"
+                value=""
+              />
+              <div class="input-group-append">
+                <button class="btn btn-success" id="add-item-btn" type="button">
+                  Add Item
+                </button>
               </div>
-            </form>
+            </div>
+            <!-- </form> -->
 
             <div id="todo-items"></div>
-            <p class="text-center" id="no-items-text">No items yet! Add one above!</p>
-
+            <p class="text-center" id="no-items-text">
+              No items yet! Add one above!
+            </p>
           </div>
         </div>
       </div>
