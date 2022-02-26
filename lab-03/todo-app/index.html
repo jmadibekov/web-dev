@@ -41,6 +41,7 @@
             <form>
               <div class="mb-3 input-group">
                 <input
+                  id="input-field"
                   class="form-control"
                   placeholder="New Item"
                   aria-describedby="basic-addon1"
@@ -48,40 +49,20 @@
                   value=""
                 />
                 <div class="input-group-append">
-                  <button class="btn btn-success" type="submit" disabled="">
+                  <button
+                    class="btn btn-success"
+                    id="add-item-btn"
+                    type="button"
+                  >
                     Add Item
                   </button>
                 </div>
               </div>
             </form>
 
-            <p class="text-center">No items yet! Add one above!</p>
+            <div id="todo-items"></div>
+            <p class="text-center" id="no-items-text">No items yet! Add one above!</p>
 
-            <div class="item false container-fluid">
-              <div class="row">
-                <div class="text-center col-1">
-                  <button
-                    aria-label="Mark item as complete"
-                    type="button"
-                    class="toggles btn btn-link btn-sm"
-                  >
-                    <i class="far fa-square"></i>
-                  </button>
-                </div>
-
-                <div class="name col-10">apple</div>
-
-                <div class="text-center remove col-1">
-                  <button
-                    aria-label="Remove Item"
-                    type="button"
-                    class="btn btn-link btn-sm"
-                  >
-                    <i class="fa fa-trash text-danger"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
