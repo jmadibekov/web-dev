@@ -60,8 +60,32 @@ function ask(question, yes, no) {
   else no();
 }
 
-ask(
-  "Do you agree",
-  () => alert("You agreed."),
-  () => alert("You canceled the execution.")
-);
+// ask(
+//   "Do you agree",
+//   () => alert("You agreed."),
+//   () => alert("You canceled the execution.")
+// );
+
+// https://javascript.info/object
+
+let user = {};
+user.name = "John";
+user.surname = "Smith";
+console.log(user.name);
+user.name = "Pete";
+delete user.name;
+
+for (let key in user) {
+  console.log(key);
+}
+
+user = {
+  name: "John",
+  age: 30,
+
+  sayHi() {
+    console.log(`object saying hi ${this.name}`);
+  },
+};
+
+user.sayHi();
