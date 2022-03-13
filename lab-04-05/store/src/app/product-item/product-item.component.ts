@@ -9,8 +9,13 @@ import { Product, products } from '../products';
 })
 export class ProductItemComponent implements OnInit {
   @Input() product!: Product;
+  numOfLikes: number = 0;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  like(product: Product) {
+    this.numOfLikes++;
+  }
 }

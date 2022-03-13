@@ -1,5 +1,8 @@
+import { Category } from './categories';
+
 export interface Product {
   id: number;
+  category: Category;
   name: string;
   price: number;
   description: string;
@@ -11,6 +14,7 @@ export interface Product {
 export const products: Product[] = [
   {
     id: 1,
+    category: Category.Electronics,
     name: 'iPhone 13 Pro Max',
     price: 1199,
     description:
@@ -21,6 +25,7 @@ export const products: Product[] = [
   },
   {
     id: 2,
+    category: Category.Books,
     name: 'A Gentleman in Moscow: A Novel',
     price: 9.34,
     description:
@@ -33,6 +38,7 @@ export const products: Product[] = [
   },
   {
     id: 3,
+    category: Category.Electronics,
     name: 'Apple AirPods Pro',
     price: 189.99,
     description: '',
@@ -43,6 +49,7 @@ export const products: Product[] = [
   },
   {
     id: 4,
+    category: Category.Clothes,
     name: "Dockers Men's Weston Wool Blend Scarf Coat",
     price: 200,
     description: '',

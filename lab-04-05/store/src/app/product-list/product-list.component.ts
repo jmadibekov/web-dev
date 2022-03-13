@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Category } from '../categories';
 
 import { Product, products } from '../products';
 
@@ -9,6 +10,8 @@ import { Product, products } from '../products';
 })
 export class ProductListComponent implements OnInit {
   products: Product[] = products;
+  Category = Category;
+  selectedCategories = new Set();
 
   constructor() {}
 
@@ -22,5 +25,22 @@ export class ProductListComponent implements OnInit {
 
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
+  }
+
+  onToggle(category: string) {
+    if (this.selectedCategories.has(category)) {
+      this.selectedCategories.delete(category);
+    } else {
+      this.selectedCategories.add(category);
+    }
+
+    this.products = products.filter((product) => {
+      let name = product.category.toString();
+      name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+      return this.selectedCategories.has(name);
+    });
+
+    console.log(this.selectedCategories);
+    console.log(this.products);
   }
 }

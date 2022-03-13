@@ -1,0 +1,8 @@
+.category {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.category.selected {
+  background-color: aqua;
+}
