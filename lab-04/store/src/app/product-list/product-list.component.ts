@@ -14,8 +14,10 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  share() {
-    window.alert('The product has been shared!');
+  share(product: Product) {
+    console.log(`${product.name} has been shared!`);
+    const telegramShareUrl = `https://t.me/share/url?url=${product.amazonLinkUrl}&text=${product.name}`;
+    window.location.href = telegramShareUrl;
   }
 
   onNotify() {
