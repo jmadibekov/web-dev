@@ -1,0 +1,11 @@
+<p *ngIf="!loaded">Loading album photos...</p>
+
+<div *ngIf="loaded">
+  <h2>Album Photos of #{{ album.id }}</h2>
+  <ul>
+    <li *ngFor="let photo of photos">
+      {{ photo.id }} {{ photo.title }}
+      <img width="30" [src]="photo.url" alt="photo" />
+    </li>
+  </ul>
+</div>
