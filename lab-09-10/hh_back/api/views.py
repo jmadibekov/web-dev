@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 from rest_framework.decorators import action, api_view
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 
 from .models import Company, Vacancy
 from .serializers import CompanySerializer, VacancySerializer
@@ -9,6 +10,9 @@ from .serializers import CompanySerializer, VacancySerializer
 class CompanyViewSet(viewsets.ModelViewSet):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
+    permission_classes = [
+        IsAuthenticated,
+    ]
 
     @action(detail=True)
     def vacancies(self, request, pk):
