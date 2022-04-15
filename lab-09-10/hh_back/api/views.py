@@ -1,6 +1,5 @@
-from multiprocessing import managers
 from rest_framework import viewsets
-from rest_framework.decorators import action
+from rest_framework.decorators import action, api_view
 from rest_framework.response import Response
 
 from .models import Company, Vacancy
@@ -13,6 +12,8 @@ class CompanyViewSet(viewsets.ModelViewSet):
 
     @action(detail=True)
     def vacancies(self, request, pk):
+        print("You are", request.user, request.auth)
+
         vacancies = Vacancy.objects.filter(company__id=pk).all()
 
         serializer = VacancySerializer(vacancies, many=True)
@@ -29,3 +30,8 @@ class VacancyViewSet(viewsets.ModelViewSet):
 
         serializer = self.get_serializer(vacancies, many=True)
         return Response(serializer.data)
+
+
+@api_view()
+def hello_world(request):
+    return Response({"message": "Hello, world!"})
