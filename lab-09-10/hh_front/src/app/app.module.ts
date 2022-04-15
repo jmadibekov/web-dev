@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { CompaniesComponent } from './companies/companies.component';
 import { FormsModule } from '@angular/forms';
 import { AuthInterceptor } from './AuthInterceptor';
+import { CompanyDetailComponent } from './company-detail/company-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, CompaniesComponent],
+  declarations: [AppComponent, CompaniesComponent, CompanyDetailComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
     {

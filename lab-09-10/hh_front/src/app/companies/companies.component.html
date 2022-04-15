@@ -2,6 +2,6 @@
 
 <ul>
   <li *ngFor="let c of companies">
-    <p>name: {{ c.name }}, address: {{ c.address }}</p>
+    <a [routerLink]="['/companies', c.id]">Company: "{{ c.name }}", located in {{ c.city }}</a>
   </li>
 </ul>

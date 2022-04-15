@@ -1,0 +1,12 @@
+<div *ngIf="loaded">
+    <h3>{{ company.name }}</h3>
+    <p>Description: {{ company.description }}</p>
+    <p>Address: {{ company.address }}</p>
+
+    <h4>Vacancies:</h4>
+    <ul>
+        <li *ngFor="let v of vacancies">
+            <p>{{ v.name }} with salary {{ v.salary }} KZT</p>
+        </li>
+    </ul>
+</div>
